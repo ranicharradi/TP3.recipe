@@ -81,8 +81,6 @@ public class ClientGUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Error adding recipe.");
         }
     }
-
-    // Action: Get data from Server
     private void refreshListAction() {
         try {
             tableModel.setRowCount(0);
