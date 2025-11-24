@@ -9,7 +9,6 @@ public class ServerPublisher {
 
     public static synchronized void start() {
         if (endpoint != null) {
-            // Server already started; avoid binding the port again
             return;
         }
         endpoint = Endpoint.publish(URL, new RecipeServiceImpl());
@@ -25,10 +24,8 @@ public class ServerPublisher {
     }
 
     public static void main(String[] args) {
-        // Start the server
         start();
 
-        // Ensure the port is released when the JVM is shutting down
         Runtime.getRuntime().addShutdownHook(new Thread(ServerPublisher::stop));
     }
 }
