@@ -1,24 +1,28 @@
-# SOAP Web Service 
+# SOAP Web Service
 
-### Server Must Be Running
-Before testing, ensure the SOAP server is started:
+SOAP web service for recipes. This project publishes a WSDL-backed endpoint at `http://localhost:8080/ws/recipes`.
+
+## Quick Start
+
+1. Open the project in IntelliJ.
+2. Run the **ServerPublisher** run configuration.
+3. Wait for the console message: `Server started at: http://localhost:8080/ws/recipes`.
+
+## Endpoints
+
 ```
-URL: http://localhost:8080/ws/recipes
-WSDL: http://localhost:8080/ws/recipes?wsdl
+Service URL: http://localhost:8080/ws/recipes
+WSDL URL:    http://localhost:8080/ws/recipes?wsdl
 ```
 
-## Starting the Server
+## Verify It Is Running
 
-1. Open the project in IntelliJ
-2. Run the **ServerPublisher** configuration
-3. Wait for console message: `Server started at: http://localhost:8080/ws/recipes`
+Open a browser and navigate to:
 
-
-### Verify Server is Running
-Open browser and navigate to:
 ```
 http://localhost:8080/ws/recipes?wsdl
 ```
+
 You should see the WSDL XML document.
 
 
